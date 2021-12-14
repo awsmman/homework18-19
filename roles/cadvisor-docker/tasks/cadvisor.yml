@@ -1,0 +1,3 @@
+---
+- name: 'Cadvisor install'
+  shell: 'docker run -d --name cadvisor  --network={{ network }} -p {{ port }}:8080 google/cadvisor:{{ tag }} '

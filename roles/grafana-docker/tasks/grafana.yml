@@ -1,0 +1,18 @@
+---
+- name: copy dashboard yaml file
+  template:
+    src: dashboard.yml.j2
+    dest: ./provisioning/dashboards/
+
+- name: copy datasource yaml file
+  template:
+    src: datasource.yml.j2
+    dest: ./provisioning/daatasources/
+
+- name: copy dashboard json file
+  template:
+    src: Docker Prometheus Monitoring-1571332751387.json
+    dest: ./provisioning/dashboards/
+
+- name: "Grafana install run"
+  shell: 'docker run -d --name grafana --network={{ network }} -p {{ port }}:3000 -v ./provisioning/dashboards/:{{ dashboards_location }} -v ./provisioning/datasources/:{{ datasources_location }} grafana/grafana:{{tag}}'

@@ -1,0 +1,5 @@
+---
+- name: 'runing zabbix server with mysql config'
+  shell: 'docker run --name zabbix-server -p {{ zabbixport }}:3306 -e DB_SERVER_HOST="myDB" -e MYSQL_USER="awsmman" -e MYSQL_PASSWORD="Admin1324" -d zabbix/zabbix-server-mysql:latest'
+
+'

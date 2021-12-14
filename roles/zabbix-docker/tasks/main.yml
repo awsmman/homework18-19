@@ -1,0 +1,3 @@
+---
+- name: "Zabbix install"
+  import_tasks: zabbix.yml

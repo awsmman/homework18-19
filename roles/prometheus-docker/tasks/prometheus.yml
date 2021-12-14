@@ -1,0 +1,10 @@
+---
+# tasks file for roles/prometheus
+
+- name: copy prometheus yaml file
+  template:
+    src: prometheus.yml.j2
+    dest: /home/ubuntu/prometheus.yml
+
+- name: 'Deploy node-exporter config'
+  shell: 'docker run -d --name prometheus -p {{ prometheus_port }}:9090 --network={{ network }} -v /home/ubuntu/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus:{{ tag }} "--config.file=/etc/prometheus/prometheus.yml"'

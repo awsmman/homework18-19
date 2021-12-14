@@ -1,0 +1,5 @@
+- name: "Docker install"
+  hosts: myec2
+  roles:
+    - docker
+  become: yes

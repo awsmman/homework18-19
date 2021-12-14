@@ -1,0 +1,4 @@
+---
+# defaults file for cadvisor-docker
+port: 8080
+tag: latest

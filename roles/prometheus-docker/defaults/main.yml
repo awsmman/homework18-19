@@ -1,0 +1,6 @@
+---
+# defaults file for roles/prometheus
+
+prometheus_port: 9090
+tag: latest
+container_node: node

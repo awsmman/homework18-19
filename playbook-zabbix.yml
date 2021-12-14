@@ -1,0 +1,5 @@
+- name: "Zabbix install"
+  hosts: myec2
+  roles:
+    - zabbix-docker
+  become: yes

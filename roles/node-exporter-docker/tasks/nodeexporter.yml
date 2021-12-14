@@ -1,0 +1,9 @@
+---
+# tasks file for roles/node-exporter
+- name: 'Docker network create'
+  shell: 'docker network create monitoring'
+  when: network
+
+
+- name: 'Deploy node-exporter config'
+  shell: 'docker run -d --name node  --network={{ monitoring-network }} -p {{ port }}:9100 prom/node-exporter:{{ tag }} '

@@ -1,0 +1,3 @@
+---
+- name: "Node Exporter install"
+  import_tasks: nodeexporter.yml

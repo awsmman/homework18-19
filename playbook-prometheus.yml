@@ -1,0 +1,7 @@
+---
+# time ansible-playbook playbook-node-exporter.yml -i inventories/ec2/ --check
+- name: "prometheus install"
+  hosts: myec2
+  roles:
+    - prometheus-docker
+  become: yes

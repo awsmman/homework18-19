@@ -1,0 +1,5 @@
+# Stack Network
+network: monitoring
+#monitoring-network: monitoring
+node_exporter_image_version: latest
+node_exist: true

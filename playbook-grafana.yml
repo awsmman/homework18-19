@@ -1,0 +1,5 @@
+- name: "Grafana install"
+  hosts: myec2
+  roles:
+    - grafana-docker
+  become: yes

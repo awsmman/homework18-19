@@ -1,0 +1,6 @@
+---
+# vars file for grafana-docker
+GF_SECURITY_ADMIN_PASSWORD: Admin1324
+GF_USERS_ALLOW_SIGN_UP: false
+dashboards_location: /etc/grafana/provisioning/dashboards
+datasources_location: /etc/grafana/provisioning/datasources

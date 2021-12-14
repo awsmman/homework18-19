@@ -1,0 +1,5 @@
+- name: "Cadvisor install"
+  hosts: myec2
+  roles:
+    - cadvisor-docker
+  become: yes

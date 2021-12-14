@@ -1,0 +1,5 @@
+- name: "Node-Exporter install"
+  hosts: myec2
+  roles:
+    - node-exporter-docker
+  become: yes
